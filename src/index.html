@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Академия ремонтых услуг</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="./js/menu.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="pt-1 pb-1 ">
+      <div class="nav-container">
+        <div class="logo">
+        <img src="./img/Белый лого.png" alt="LOGO">
+      </div>
+      <div class="wrap">
+        <div class="phone">+7 (495) 20-158-02</div>
+        <div class="menu-hamburger">
+          <span class="toggle-button">
+            <div class="menu-bar menu-bar-top"></div>
+            <div class="menu-bar menu-bar-middle"></div>
+            <div class="menu-bar menu-bar-bottom"></div>
+          </span>
+          <div class="menu-wrap pt-1">
+            <div class="menu-sidebar">
+              <div class="header-menu flex-row-ja">
+                <div class="logo">
+                  <img src="./img/фиолетовый лого.png" alt="LOGO">
+                </div>
+                <div class="active-menu phone">+7 (495) 20-158-02</div>
+                <span class="toggle-button">
+                  <div class="active-toggle menu-bar menu-bar-top"></div>
+                  <div class="active-toggle menu-bar menu-bar-middle"></div>
+                  <div class="active-toggle menu-bar menu-bar-bottom"></div>
+                </span>
+              </div>
+              <ul class="menu">
+                <li><a class="menu_link" href="#calculator">Расчет стоимости</a></li>
+                <li><a class="menu_link" href="#advantages">Преимущества</a></li>
+                <li><a class="menu_link" href="#our-services">Наши услуги</a></li>
+                <li><a class="menu_link" href="#projects">Наши проекты</a></li>
+                <li><a class="menu_link" href="#job-descriptions">Этапы работы</a></li>
+                <li><a class="menu_link" href="#prices">Стоимость услуг</a></li>
+              </ul>           
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </nav>
+  </header>
+  <main>
+    <section class="first-screen">
+      <div class="first-screen-wrap">
+        <div class="first-screen-title">
+          <h1>Ремонт - это то, <br> что мы умеем делать</h1>
+          <p class="pt-2 pb-4">С 2011 года воплощаем в реальность ваши мечты для комфортной жизни и бизнеса</p>
+          <button class="btn primary">Заявка на ремонт</button>
+        </div>
+      </div>
+      <div id="calculator" class="calculator-wrap">
+        <div class="container">
+          <h2 class="mw-32">Расчет стоимости ремонта</h2>
+          <p class="pt-1 mw-32">Калькулятор рассчитывает ориентировочную стоимость проекта. Подробная смета предоставляется после проведения замеров помещения и уточнения индивидуальных пожеланий заказчика.</p>
+        </div>
+        <div class="calculator-container">
+          <div class="calculator">
+              <div class="mode-selection-container">
+                <div class="mode_selection">
+              <h3 class="pt-2">Тип объекта</h3>
+              <div class="button-block pt-1">
+                <button id="forLiving" class="btn check left active-state areaType">Жилые помещения</button>
+                <button id="notForLiving" class="btn check areaType">Нежилые помещения</button>
+              </div>
+            </div>
+            <div class="mode_selection">
+              <h3 class="pt-2">Тип ремонта</h3>
+              <div class="button-block pt-1">
+                <button id="repair" class="btn check active-state typeOfRepair">Ремонт</button>
+                <button id="designRepair" class="btn check middle typeOfRepair">Дизайнерский ремонт</button>
+                <button id="allInclude" class="btn check typeOfRepair">Комплексный ремонт «под ключ»</button>
+              </div>
+            </div>
+              </div>
+            
+            <div class="mode_selection">
+              <h3 class="pt-2">Площадь</h3>
+              <div class="button-block pt-1 range-block">
+                <div class="input-wrap">
+                   <input type="text" readonly value="70" class="output space" id="rangevalue"> <span style="text-align: left;">кв.м</span>
+                </div>
+                <input class="square" oninput="rangevalue.value=value" type="range" min="0" max="100" value="70">
+              </div>
+            </div>
+          </div>
+          <form id="firstForm" class="form-calc" action="">
+            <div class="form-container">
+              <h3 class="pt-2">Примерная стоимость ремонта</h3>
+              <input class="output price pt-2" readonly type="text" value="572 335 руб." >
+              <label class="pt-2" for="#userName">Имя</label>
+              <input class="mt-05 form-input" id="userName" name="userName" type="text" required placeholder="Имя">
+              <label class="pt-2" for="#userPhone">Телефон</label>
+              <input class="mt-05 form-input" id="userPhone" name="userPhone" type="tel" placeholder="Телефон" required>
+              <button type="submit" name="submit" class="btn primary big">Узнать точную стоимость </button>
+              <div class="consent_to_processng pt-1">
+                <input id="userAgreement" name="userAgreement" type="checkbox">
+                <p>
+                  Нажимая кнопку «Отправить», вы соглашаетесь с условиями. <a href="">Политики конфиденциальности.</a> 
+                </p>
+              </div>
+            </div>
+              
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="advantages" class="advantages pb-6">
+      <div class="container">
+        <h1>ПРЕИМУЩЕСТВА <br> СОТРУДНИЧЕСТВА С НАМИ</h1>
+        <p class="pt-2">Предлагаем комплексный ремонт помещений «под ключ» и гарантию на все выполненные работы.</p>
+        <div class="card-container pt-3">
+          <div class="card">
+            <h3 class="pt-2">Берем на себя юридическую ответственность за реализацию проекта </h3>
+            <hr>
+            <p class="pt-2">Договор на комплексный ремонт квартиры или офиса «под ключ», включающий различные виды работ и услуг: от отделочных до клининга, заключается на одно юридическое лицо. За все отвечает один исполнитель, который организует работу и осуществляет контроль над всеми подрядными организациями.</p>
+          </div>
+          <div class="card">
+            <h3 class="pt-2">Оптимизируем расходы заказчика на работу и материалы </h3>
+            <hr >
+            <p class="pt-2">Специалисты компании на всех этапах реализации проекта осуществляют: технический и авторский надзор, доставку строительных материалов на объект по закупочным ценам, а также консультируют заказчиков по любым вопросам для принятия экономически правильных решений.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="pt-2">Отвечаем за качество выполняемых ремонтно-отделочных работ </h3>
+            <hr>
+            <p class="pt-2">Работаем с проверенными строительными бригадами, которые специализируются на ремонте бизнес и премиум класса. Квалифицированные специалисты несут ответственность за результат и качество выполняемых работ. На период ведения ремонтных работ все объекты застрахованы.</p>
+          </div>
+          <div class="card">
+            <h3 class="pt-2">Предоставляем гарантию на выполненные работы </h3>
+            <hr>
+            <p class="pt-2">Мы дорожим своей репутацией и поэтому строим с нашими заказчиками деловые отношения исключительно на взаимовыгодной и прозрачной основе, заключаем официальный договор об оказании услуг, предоставляем гарантии, балуем подарками, скидками и акциями.</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="commertial-info">
+      <div id="for-live" class="commertial-info-container">
+        <div class="frame"></div>
+        <div class="commertial-info-image">
+          <img src="./img/pexels-max-vakhtbovych-7587744 1.png" alt="Photo">
+        </div>
+        <div class="commertial-info-text">
+          <h1>РЕМОНТ ДЛЯ ЖИЗНИ</h1>
+          <p class="pt-2">Поводом начать ремонт в квартире или доме для многих является пришедшая в негодность сантехника, неработающие электрические розетки или разукрашенные маленькими детками обои. Если Вы решились на капитальный ремонт, то это прежде всего уникальная возможность исправить недостатки планировки, повысить уровень комфорта и создать современный интерьер. </p>
+          <p class="pt-1">Наша компания согласует объем работ и зафиксирует их стоимость, закупит необходимые строительные материалы. Срок проведения ремонта квартиры или дома зависит от сложности проекта и площади помещения.</p>
+        </div>
+      </div>
+      <div id="for-busines" class="commertial-info-container">
+        <div class="frame second-frame"></div>
+        <div class="commertial-info-image second-image">
+          <img src="./img/pexels-max-vakhtbovych-5997959.png" alt="Photo">
+        </div>
+        <div class="commertial-info-text second-text">
+          <h1>РЕМОНТ для бизнеса</h1>
+          <p class="pt-2">Ремонт нежилых помещений - это не только замена изношенного напольного покрытия или смена цвета стен. Функциональный индивидуальный дизайн-проект позволяет привлечь новый поток клиентов и удержать старых. Качественный современный ремонт способствует раскрутке Вашего бизнеса.</p>
+          <p class="pt-1">Наша компания выполнит ремонт любой сложности для бизнеса «под ключ» в соответствии со строительными нормами и регламентами. Стоимость работ будет зависеть от того, что Вы хотите получить в конечном результате. Для реализации любых проектов мы используем только качественные и долговечные материалы, безопасные для окружающих. Вам не придется выполнять плановые косметические ремонты долгие годы.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="our-services" class="our-services">
+      <div class="container pt-6 pb-6">
+        <h1>НАШИ УСЛУГИ</h1>
+        <div class="cards-container">
+          <div class="service-card">
+            <img src="./img/design.png" alt="design">
+            <h4 class="pt-2">Дизайн-проект</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/decor.png" alt="decor">
+            <h4 class="pt-2">Декор интерьера</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/key.png" alt="key">
+            <h4 class="pt-2">Комплектация “Под ключ”</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/materials.png" alt="materials">
+            <h4 class="pt-2">Закупка и доставка материалов</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/tech.png" alt="tech">
+            <h4 class="pt-2">Технический надзор</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/smartHome.png" alt="smartHome">
+            <h4 class="pt-2">Умный дом</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/potolok.png" alt="potolok">
+            <h4 class="pt-2">Натяжные потолки</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/mebel.png" alt="mebel">
+            <h4 class="pt-2">Изготовления мебели</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/cleaning.png" alt="cleaning">
+            <h4 class="pt-2">Клининг</h4>
+          </div>
+          <div class="service-card">
+            <img src="./img/garbage.png" alt="garbage">
+            <h4 class="pt-2">вывоз мусора</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question ">
+      <div class="container pt-6 question-container">
+        <div class="text-block">
+          <h1>Есть вопросы?</h1>
+          <p class="pt-2">Оформить заявку на замер, задать вопросы по технологиям, перечню ремонтных работ, квалификации наших строителей и отделочников можно по телефону или воспользоваться онлайн заявкой.</p>
+        </div>
+        <div class="buttons-block">
+          <button href="#calculator" class="btn primary menu_link">Заказать смету</button>
+          <button href="#form" class="btn empty menu_link">Оставить заявку</button>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects pb-6">
+      <div class="container pt-6">
+        <h1>Наши проекты</h1>
+        <div class="slider-container-wrap pt-2">
+          <div class="slider-left border">
+            <div class="swiper-container slider-photos-container">
+              <div class="swiper-wrapper slider-photos-wrap">
+                <div class="swiper-slide text-slide">
+                  <img src="./img/Снимок экрана 2021-05-04 в 16.01 1.png" alt="">
+                </div>
+                <div class="swiper-slide text-slide">
+                  <img src="./img/pexels-max-vakhtbovych-5997959@2x.png" alt="">
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="slider-right border">
+            <div class="slider-right-text border">
+              <div class="slider-right-progress-bar border">
+                <span class="active-slide">1</span>
+                <div class="slider-pagination-container">
+                  <div class="swiper-pagination"></div>
+                </div>
+                <span class="quantity-of-slides">2</span>
+              </div>
+              <div class="swiper-container slider-texts-container">
+                <div class="swiper-wrapper slider-texts-wrap">
+                  <div class="swiper-slide text-swiper-slide">
+                    <h3 class="pt-3">Заказчик - Данила</h3>
+                    <div class="short-work-description">
+                      <h6 class="slide-square">Площадь: 40 кв. м</h6>
+                      <h6 class="slide-time">Срок выполнения: 2 месяца</h6>
+                      <h6 class="slide-type">Тип ремонта: комплексный</h6>
+                    </div>
+                    <h3>Описание проекта</h3>
+                    <p>Выполнен ремонт квартиры за 2 месяца. Работа  над этим проектом выполнена в современом дизайн-проектом. Мы крайне тщательно выбирали цвета и материалы. Учли пожелания заказчика - молодого человека 25 лет. Работы была выполнена строго в срок, заказчик был доволен нашей работой.</p>
+                  </div>
+                  <div class="swiper-slide text-swiper-slide">
+                    <h3 class="pt-3">Заказчик - Наталья</h3>
+                    <div class="short-work-description">
+                      <h6 class="slide-square">Площадь: 40 кв. м</h6>
+                      <h6 class="slide-time">Срок выполнения: 2 месяца</h6>
+                      <h6 class="slide-type">Тип ремонта: комплексный</h6>
+                    </div>
+                    <h3>Описание проекта</h3>
+                    <p>Выполнен ремонт квартиры за 2 месяца. Работа  над этим проектом выполнена в современом дизайн-проектом. Мы крайне тщательно выбирали цвета и материалы. Учли пожелания заказчика - молодого человека 25 лет. Работы была выполнена строго в срок, заказчик был доволен нашей работой.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-right-buttons border">
+              <button class="btn primary prev"></button>
+              <button class="btn primary next"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="job-descriptions" class="job-descriptions pt-6">
+      <div class="container ">
+        <h1>ПРОЙДЁМ ВСЕ ЭТАПЫ РЕМОНТА ВМЕСТЕ</h1>
+        <div class="job-descriptions-grid-container pt-3">
+          <div class="card-explanarion dogovor">
+            <h2>ДОГОВОРНОЙ</h2>
+            <p class="pt-1">Замер помещения, детальный расчет сметы, согласование и заключение договора, разработка дизайн-проекта.</p>
+          </div>
+          <div class="wrap-number">
+            <div class="number one">1</div>
+          </div>
+          
+          <div class="card-explanarion chernovoy">
+            <h2>ЧЕРНОВОЙ</h2>
+            <p class="pt-1">Демонтаж, возведение периметра помещения, выравнивание плоскостей, монтаж электрики, инженерных коммуникаций, систем вентиляции и кондиционирования.</p>
+          </div>
+          <div class="wrap-number two">
+            <div class="number ">2</div>
+          </div>
+          
+          <div class="card-explanarion chistovoy">
+            <h2>ЧИСТОВОЙ</h2>
+            <p class="pt-1">Монтаж напольного покрытия, декорирование стен, установка осветительных приборов и розеток, подключение сантехники.</p>
+          </div>
+          <div class="wrap-number three">
+            <div class="number ">3</div>
+          </div>
+          
+          <div class="card-explanarion komplectacia">
+            <h2>КОМПЛЕКТАЦИЯ</h2>
+            <p class="pt-1">Изготовление и монтаж мебели, декорирование помещения.</p>
+          </div>
+          <div class="wrap-number four">
+            <div class="number ">4</div>
+          </div>
+          
+          <div class="card-explanarion sdacha">
+            <h2>СДАЧА ОБЪЕКТА</h2>
+            <p class="pt-1">Проверка работоспособности всех систем, клининг, вывоз мусора, вручение гарантийного сертификата.</p>
+          </div>
+          <div class="number five">5</div>
+        </div>
+      </div>
+    </section>
+    <section id="prices" class="prices">
+      <div class="container pt-6 pb-6">
+        <h1>стоимость ремонтА</h1>
+        <div class="prices-card-container pt-2">
+          <div class="card">
+            <h2 class="pt-3">Стандартный ремонт</h2>
+            <h3 class="pt-2">От 10000 руб./кв.м</h3>
+            <hr>
+            <h4>Работы включают:</h4>
+            <p>монтаж или замену инженерных сетей (электрика, сантехника), выравнивание всех поверхностей (стены, потолки, пол). Используются материалы среднего ценового сегмента (обои, ламинат, плитка, краска).</p>
+            <p class="pt-2">Ремонт выполняется без предоставления дизайн-проекта, на основании пожеланий заказчика.</p>
+            <button class="btn price-card mt-2 menu_link" href="#form">Заказать</button>
+          </div>
+          <div class="card">
+            <h2 class="pt-3">Ремонт бизнес-класса</h2>
+            <h3 class="pt-2">От 15000 руб./кв.м</h3>
+            <hr>
+            <h4>Работы включают:</h4>
+            <p>Задается правильная геометрия помещения 90 градусов с идеальным выравниванием всех поверхностей (стены, потолки, пол). Используются высокого качества материалы (декоративная штукатурка, паркетная или массивная доска, многоуровневые ГКЛ потолки).</p>
+            <p class="pt-2">Работы выполняются по индивидуальному дизайн-проекту.</p>
+            <button class="btn price-card mt-2 menu_link" href="#form">Заказать</button>
+          </div>
+          <div class="card">
+            <h2 class="pt-3">Эксклюзивный ремонт</h2>
+            <h3 class="pt-2">От 20000 руб./кв.м</h3>
+            <hr>
+            <h4>Работы включают:</h4>
+            <p>В работе используются дорогие эксклюзивные материалы (венецианская штукатурка, штучный художественный паркет, лепнина из гипса).</p>
+            <p class="pt-2">Ремонт выполняется согласно детальному дизайн-проекту с подбором черновых и чистовых материалов, мебели и декора. Обязательным является технический и авторский надзор на еженедельной основе.</p>
+            <button class="btn price-card mt-2 menu_link" href="#form">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="director">
+      <div class="director-container pb-6 pt-6">
+        <div class="director-text-block">
+          <h1 class="pt-3">Наталья Кирияк</h1>
+          <h3 class="pt-1">Генеральный директор ООО «АКАДЕМИЯРУ»</h3>
+          <p class="pt-2">«Мы не строим новые дома, не строим коммерческую недвижимость.</p>
+          <p class="pt-1">Все, что мы делаем - это месяц за месяцем  превращаем жилые и нежилые помещения в уютные квартиры и комфортные офисы в установленные сроки и по фиксированной смете.</p>
+          <p class="pt-1 pb-4">Процесс протекает максимально плавно и без стресса для заказчика. Мы сами заботимся обо всем: от концепции до финальной стадии ремонта».</p>
+        </div>
+        <div class="director-photo">
+          <img src="./img/director.png" alt="Директор">
+        </div>
+      </div>
+    </section>
+    <section class="join-us pb-6">
+      <h1 class="pt-6">Хотите работать <br> в нашей команде?</h1>
+      <h3 class="pt-1">Присылайте ваши резюме на e-mail:</h3>
+      <a href="mailto:bos@academyru.com?subject=Заявка на ремонт">bos@academyru.com</a>
+    </section>
+    <section id="form" class="main-form">
+      <div class="container pt-6 pb-6">
+        <h1>ОСТАВЬТЕ ЗАЯВКУ НА РЕМОНТ</h1>
+        <form id="mainForm" class="form-main pt-3" >
+          <input type="text" id="mainName" name="mainName" placeholder="Ваше имя">
+          <input type="email" id="mainEmail" name="mainEmail" placeholder="Ваша электронная почта">
+          <input type="tel" id="mainPhone" name="mainPhone" placeholder="Ваш телефон">
+          <div class="submit-wrap">
+            <button type="submit" class="btn primary">Отправить</button>
+            <div class="consent_to_processng">
+                <input id="mainAgreement" name="mainAgreement"  type="checkbox">
+                <p>
+                  Нажимая кнопку «Отправить», вы соглашаетесь с условиями. <a href="">Политики конфиденциальности.</a> 
+                </p>
+              </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>  
+    <div class="container pt-3">
+      <div class="logo">
+      <img src="./img/Белый лого.png" alt="">
+    </div>
+    <div class="footer-info pt-2">
+      <nav class="footer-menu">
+        <h4>Меню</h4>
+        <ul>
+          <li><a class="page-link" href="#calculator">Расчет стоимости</a></li>
+          <li><a class="page-link" href="#advantages">Преимущества</a></li>
+          <li><a class="page-link" href="#for-live">Ремонт для жизни</a></li>
+          <li><a class="page-link" href="#for-busines">Ремонт для бизнеса</a></li>
+          <li><a class="page-link" href="#our-services">Наши услуги</a></li>
+          <li><a class="page-link" href="#projects">Наши проекты</a></li>
+          <li><a class="page-link" href="#job-descriptions">Этапы работы</a></li>
+          <li><a class="page-link" href="#prices">Стоимость услуг</a></li>
+        </ul>
+      </nav>
+      <div class="contacts">
+        <h4>Контакты</h4>
+        <a href="mailto:bos@academyru.com">bos@academyru.com</a>
+        <a class="pt-1" href="tel:+74952015802">+ 7 (495) 20-158-02</a>
+      </div>
+      <div class="requisites">
+        <h4>ООО "АКАДЕМИЯРУ"</h4>
+        <ul>
+          <li>ОГРН 1117746212869</li>
+          <li>ИНН 7729678020</li>
+          <li>КПП 773101001</li>
+          <li>№40702810801020000572</li>
+          <li>в АО "АЛЬФА-БАНК"</li>
+          <li>БИК 044525593</li>
+          <li>Кор. счет №30101810200000000593</li>
+          <li>Юр. адрес: Россия, 121352, Москва, Славянский б-р 9, офис 17</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright pt-2 pb-4">
+      <p>Copyright © 2011-2021 ACADEMYRU LLC <br>Все права защищены. Информация на сайте предоставлена исключительно для ознакомления и не является публичной офертой, определяемой положениями Статьи 437 ГК РФ.</p>
+    </div>
+    </div>
+    
+  </footer>
+  
+  <script src="./js/swiper.js"></script>
+  <script src="./js/input.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
