@@ -45,6 +45,7 @@ body {
 .mt-2{
   margin-top: 2rem;
 }
+
 header, nav{
   width: 100%;
 }
@@ -55,10 +56,10 @@ nav{
   justify-content: space-around;
 }
 .nav-container{
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
 .phone{
@@ -68,7 +69,14 @@ nav{
   font-size: 24px;
   color: #F6F6F6;
 }
-.active-menu.phone{
+.phone a{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #F6F6F6;
+}
+.active-menu.phone a{
   color: rgba(51, 51, 51, 1);
 
 }
@@ -94,7 +102,7 @@ nav{
   padding: 60px 0;
 }
 .first-screen-title{
-  padding-left: 25rem;
+  padding-left: 18rem;
 }
 .first-screen-title h1{
   font-family: Montserrat;
@@ -119,11 +127,11 @@ nav{
   letter-spacing: 0.05em;
   border: none;
   text-decoration: none;
-  padding: 1rem 3.5rem;
-  white-space: nowrap;
+  padding: 1rem 2.5rem;
+  white-space: wrap;
   outline: none;
   transition: all 0.22s;
-  font-family: Rubik;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -167,21 +175,22 @@ nav{
   padding-top: 6rem;
   width: 75%;
   background: rgba(255, 255, 255, 1);
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.34);
 }
 .calculator-container{
   margin: 0 auto;
   display: flex;
-  width: 80%;
+  width: 75%;
   justify-content: space-around;
 }
-.calculator h2{
+.calculator-wrap h2{
   font-weight: 600;
   font-size: 36px;
   text-transform: uppercase;
   color: #000000;
 }
-.calculator p{
+.calculator-wrap p{
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -194,6 +203,9 @@ nav{
   font-weight: 500;
   font-size: 20px;
   color: #333333;
+}
+.calculator-wrap .container{
+  width: 75%;
 }
 .button-block{
   display: flex;
@@ -397,18 +409,19 @@ input.price{
   justify-content: space-between;
 }
 .card{
-  max-width: 280px;
+  max-width: 19%;
   background: #F6F6F6;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-  padding: 0 20px 40px;
+  padding: 0 30px 30px;
 }
 .card h3{
-  min-height: 80px;
+  min-height: 130px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   color: #333333;
+  line-height: 140%;
 }
 .card p{
   width: unset;
@@ -416,6 +429,7 @@ input.price{
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
+  line-height: 140%;
   color: #333333;
 }
 .card hr{
@@ -425,7 +439,6 @@ input.price{
   border: none;
   width: 40%;
   margin: 0;
-  margin-top: 2rem;
 }
 /* ============== */
 /* Блок рекламного описания */
@@ -505,7 +518,7 @@ input.price{
   margin-top: 3rem;
   border: 1px solid white;
   padding-top: 44px;
-  width: 223px;
+  width: 20%;
   display: flex;
   flex-direction: column;
 }
@@ -531,7 +544,7 @@ input.price{
   align-items: center;
 }
 .text-block{
-  max-width: 50%;
+  width: 45%;
 }
 .text-block h1{
   font-family: Montserrat;
@@ -548,7 +561,6 @@ input.price{
   font-size: 20px;
   line-height: 160%;
   color: #333333;
-  padding-right: 7rem;
 }
 .btn.empty{
   color:#000000;
@@ -556,9 +568,12 @@ input.price{
   border: 1px solid #000000;
 }
 .question .buttons-block{
-  width: 40%;
+  width: 55%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.question .buttons-block .btn{
+  width: 45%;
 }
 /* ================= */
 
@@ -639,7 +654,7 @@ html,
         width: 40%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
       }
       .slider-right-progress-bar{
         height: 90px;
@@ -689,7 +704,7 @@ html,
         width: 60%;
       }
       .swiper-pagination{
-        width: 330px ;
+        width: 17% ;
         height: 4px;
       }
       .swiper-slide.text-swiper-slide{
@@ -725,10 +740,14 @@ html,
         text-align: left;
         width: 90%;
         padding-left: 1rem;
-        padding-bottom: 168px;
       }
       .slider-right-text{
-        background-color:rgba(246, 246, 246, 0.8)
+        background-color:rgba(246, 246, 246, 0.8);
+        flex: 1 0 auto;
+      }
+      .slider-texts-container{
+        flex-grow: 1;
+        height: 87%;
       }
 
 /* ============== */
@@ -751,7 +770,7 @@ html,
 }
 .job-descriptions-grid-container{
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
   display: grid;
   grid-template-columns: 5fr 1fr 5fr;
   grid-auto-rows: minmax(200px, auto);
@@ -766,7 +785,7 @@ html,
   font-weight: 600;
   font-size: 36px;
   text-transform: uppercase;
-  color: #000000;
+  color: #000000;padding-top: 20px;
 }
 .card-explanarion p{
   font-family: Roboto;
@@ -877,6 +896,8 @@ html,
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 27%;
+  max-width: unset;
 }
 .price-card{
   width: 100%;
@@ -982,7 +1003,7 @@ html,
 }
 .form-main input:not([type="checkbox"]){
   padding: 14px 0 14px 14px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-left: 0.1em;
   border: 1px solid #989898;
   box-sizing: border-box;
@@ -994,10 +1015,11 @@ html,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 .submit-wrap .consent_to_processng{
   padding-bottom: unset;
-  max-width: 50%;
+  width: 65%;
 }
 /* =========== */
 /* Footer */
@@ -1076,11 +1098,14 @@ ul{
 }
 /* ======= */
 @media (max-width: 1600px) {
-  .swiper-pagination{
-    width: 250px;
+  .container{
+    width: 80%;
   }
-  .card{
-    max-width: 230px;
+  .commertial-info-container{
+    width: 90%;
+  }
+  .calculator-wrap{
+    width: 85%;
   }
   .first-screen-title {
     padding-left: 15rem;
@@ -1089,19 +1114,25 @@ ul{
     width: 100%;
     height: 100%;
 }
+.director-container{
+  width: 90%;
+}
+.director-text-block{
+  padding-left: 11rem;
+}
 .text-swiper-slide p {
     padding-bottom: 125px;
   }
 }
 @media (max-width: 1380px) {
+  .first-screen-title {
+    padding-left: 9rem;
+  }
   .text-swiper-slide p {
     padding-bottom: 100px;
   }
   .swiper-pagination{
     width: 220px;
-  }
-  .prices-card-container .card{
-    max-width: 270px;
   }
   .director-text-block {
     padding-left: 6rem;
@@ -1110,19 +1141,21 @@ ul{
     margin: 0 auto;
     margin-top: 3rem;
     padding-top: 2rem;
-    width: 95%;
+    width: 90%;
     padding-bottom: 3rem;
+  }
+  .calculator-wrap .container{
+    width: 80%;
   }
   .calculator-container {
     display: flex;
-    width: 95%;
+    width: 85%;
   }
   .button-block{
     flex-direction: column;
   }
   .check.btn{
     width: 100%;
-    max-width: 226px;
     letter-spacing: unset;
     white-space: pre-wrap;
   }
@@ -1140,7 +1173,7 @@ ul{
     border-bottom: unset;
   }
   .calculator{
-    max-width: 50%;
+    width: 50%;
   }
   .mode_selection:nth-child(2){
     margin-left: 10px;
@@ -1149,6 +1182,26 @@ ul{
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+@media (max-width: 1200px) {
+  .nav-container{
+    width: 90%;
+  }
+  .container{
+    width: 90%;
+  }
+  .first-screen-title {
+    padding-left: 5rem;
+  }
+  .calculator-wrap{
+    width: 95%;
+  }
+  .director-text-block {
+    padding-left: 4rem;
+  }
+  .director-container {
+    width: 95%;
   }
 }
 @media (max-width: 1000px) {
@@ -1211,7 +1264,6 @@ ul{
   }
   .check.btn{
     width: 100%;
-    max-width: 226px;
     letter-spacing: unset;
     white-space: pre-wrap;
   }
@@ -1254,6 +1306,7 @@ ul{
   .card {
     max-width: 45%;
     margin-bottom: 1rem;
+    padding: 0 15px 5px;
   }
   .card h3{
     min-height: unset;
@@ -1305,8 +1358,20 @@ ul{
   }
   .service-card{
     margin-left: 1rem;
-    width: 220px;
+    width: 22%;
     margin-top: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .service-card h4{
+    width: 50%;
+    text-align: left;
+    line-height: 2rem;
+    text-align: center;
+  }
+  .service-card img{
+    max-width: 35%;
+    max-height: 30%;
   }
   .service-card:nth-child(5){
     margin-left: unset;
@@ -1322,10 +1387,11 @@ ul{
     flex-direction: column;
   }
   .text-block{
-    max-width: 85%;
+    width: 55%;
   }
   .question .buttons-block{
     margin-top: 1rem;
+    justify-content: space-between;
   }
   .question .empty{
     margin-left: 1rem;
@@ -1347,8 +1413,11 @@ ul{
     padding-top: 1rem;
   }
   .prices-card-container .card{
-    max-width: 30%;
-    padding: 0 10px 20px;
+    width: 30%;
+    padding: 0 10px 10px;
+  }
+  .prices-card-container h2{
+    font-size: 32px;
   }
   .director-text-block {
     width: 50%;
@@ -1448,6 +1517,9 @@ ul{
   .commertial-info{
     padding-bottom: 60px;
   }
+  .service-card{
+    width:30%
+  }
   .service-card:nth-child(4){
     margin-left: unset;
   }
@@ -1471,13 +1543,33 @@ ul{
   }
   .prices-card-container{
     flex-direction: column;
+    align-items: center;
   }
   .prices-card-container .card {
-    max-width: 100%;
-    padding-right: 40%;
+    width: 95%;
+    /* padding-right: 40%; */
   }
   .footer-info {
     width: 80%;
+  }
+  .text-block, .question .buttons-block{
+    width: 80%;
+  }
+  .mt-2{
+    margin-top: 0;
+  }
+  .prices-card-container .card h2{
+    width: 37%;
+  }
+  .prices-card-container .card hr{
+    width: 20%;
+  }
+  .prices-card-container .card p{
+    width: 70%;
+    margin-top: unset;
+  }
+  .prices-card-container .card .btn{
+    width: 50%;
   }
 }
 @media (max-width: 480px) {
@@ -1514,13 +1606,21 @@ ul{
     width: 80%;
   }
   .calculator {
-    max-width: 100%;
+    width: 95%;
+    max-width: unset;
   }
   .calculator-container{
     flex-direction: column;
   }
   .mode-selection-container{
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mode_selection{
+    width: 49%;
+  }
+  .mode_selection.square-input{
     width: 100%;
   }
   .btn.check.areaType.left{
@@ -1580,7 +1680,6 @@ ul{
     width: 100%;
   }
   .question .btn{
-    max-width: 45%;
     padding: 1rem 2rem;
   }
   .question-container{
@@ -1598,11 +1697,8 @@ ul{
   .prices-card-container .card {
     padding-right: 10%;
   }
-}
-@media (max-width: 480px){
-  .wrap{
-    flex-direction: column;
-    align-items: flex-end;
+  .phone a{
+    font-size: 16px;
   }
   .logo{
     max-width: 130px;
@@ -1612,43 +1708,35 @@ ul{
   }
   .first-screen {
     padding-top: 26px;
-    background-image: url(../img/bg1\ 320.png);
+    background-image: url(../img/bg1-480.png);
     background-position: unset;
     background-size: 113%;
   }
-  .first-screen-wrap {
+  .text-block {
     width: 100%;
   }
-  .first-screen-title h1 {
-    font-size: 24px;
-  }
-  .first-screen-title .btn.primary{
-    position: absolute;
-    margin-top: 190px;
-  }
   .calculator-wrap{
-    margin-top: 235px;
     padding-bottom: 1rem;
   }
   .calculator-wrap h2{
     font-size: 24px;
   }
   .mode-selection-container{
-    flex-direction: column;
+    flex-direction: row;
   }
   .mode_selection:nth-child(2) {
     margin-left: unset;
   }
   .form-calc{
-    width: unset;
-    margin-left: unset;
+    width: 90%;
+    margin: 1rem auto;
   }
   p{
     font-size: 12px;
   }
   .range-block{
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     height: 40px;
     margin: 0 auto;
   }
@@ -1671,16 +1759,6 @@ ul{
   .second-text{
     grid-column: 11/39;
   }
-  .service-card{
-    margin-left: 0;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px 0 20px 26px;
-  }
-  .service-card:nth-child(4), .service-card:nth-child(10) {
-    margin-left: 0;
-  }
   .text-block h1 {
     font-size: 24px;
   }
@@ -1688,18 +1766,7 @@ ul{
     font-size: 16px;
   }
   .question .buttons-block{
-    flex-direction: column;
-  }
-  .question .btn{
-    width: 100%;
-    max-width: 100%;
-  }
-  .question .empty{
-    margin-left: unset;
-    margin-top: 1rem;
-  }
-  .wrap-number, .number{
-    display: none;
+    flex-direction: row;
   }
   .job-descriptions h1, .job-descriptions h2{
     font-size: 24px;
@@ -1708,13 +1775,19 @@ ul{
   .card-explanarion p{
     font-size: 16px;
   }
+  .card-explanarion h2 {
+    padding-top: 2rem;
+}
+  .prices-card-container .card p {
+    width: 100%;
+  }
+  .prices-card-container .card .btn {
+    width: 80%;
+  }
   .job-descriptions-grid-container{
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
     padding-bottom: 40px;
-  }
-  .card-explanarion{
-    width: 100%;
   }
   .prices h1{
     font-size: 24px;
@@ -1754,9 +1827,6 @@ ul{
   .main-form h1{
     font-size: 24px;
   }
-  .form-main input:not([type="checkbox"]){
-    margin-bottom: 1rem;
-  }
   .form-main{
     width: unset;
   }
@@ -1765,7 +1835,7 @@ ul{
   }
   .submit-wrap .consent_to_processng {
       padding-bottom: unset;
-      max-width: 95%;
+      width: 95%;
       margin-bottom: 10px;
   }
   .submit-wrap  .btn{
@@ -1782,10 +1852,99 @@ ul{
   }
   .pt-6 {
     padding-top: 1rem;
-}
+  }
+  .first-screen-title{
+    padding-left: 1rem;
+  }
 }
 @media (max-width:320px) {
   .swiper-pagination {
     width: 150px;
+  }
+  .wrap-number, .number{
+    display: none;
+  }
+  .card-explanarion{
+    width: 100%;
+  }
+  .card-explanarion h2{
+    padding-top: unset;
+  }
+  .wrap{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .phone a{
+    font-size: 12px;
+  }
+  .first-screen-wrap {
+    width: 100%;
+  }
+  .first-screen-title h1 {
+    font-size: 24px;
+  }
+  .first-screen{
+    background-image: url(../img/bg1\ 320.png);
+    padding-bottom: 1rem;
+  }
+  .first-screen-wrap .btn {
+    width: 95%;
+  }
+  .calculator-wrap .container {
+    width: 95%;
+  }
+  .calculator-wrap{
+    padding-bottom: 0;
+  }
+  .calculator-wrap .container p{
+    display: none;
+  }
+  .calculator-wrap p{
+    font-size: 12px;
+  }
+  .mode-selection-container {
+    flex-direction: column;
+  }
+  .mode_selection{
+    width: 100%;
+  }
+  .range-block{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-calc {
+    width: 100%;
+  }
+  .btn.big {
+    padding: 1rem 0.5rem;
+  }
+  .advantages p {
+    margin: 0;
+  }
+  .service-card{
+    width: 100%;
+    margin-left: 0 !important;
+    flex-direction: row;
+    padding-top: unset;
+    justify-content: space-around;
+  }
+  .service-card h4{
+    padding-top: unset;
+  }
+  .service-card img {
+    width: 10%;
+  }
+  .question .buttons-block{
+    flex-direction: column;
+  }
+  .question .buttons-block .btn{
+    width: 100%;
+  }
+  .question .empty{
+    margin-left: unset;
+    margin-top: 1rem;
+  }
+  .prices-card-container .card .btn{
+    width: 100%;
   }
 }

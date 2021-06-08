@@ -34,7 +34,7 @@ $(document).ready(function() {
   }
 
 // Стартовые значения при загрузке
-  var calculate = (calculation.areaType.forLiving * calculation.typeOfRepair.repair * calculation.square) 
+  var calculate = (calculation.areaType.forLiving * calculation.typeOfRepair.allInclude * calculation.square) 
 
   $('.price').val(toString(calculate)) 
 
