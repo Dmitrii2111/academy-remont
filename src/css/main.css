@@ -507,20 +507,21 @@ input.price{
   font-size: 36px;
   text-transform: uppercase;
   color: #F6F6F6;
+  margin-left: 1rem;
 }
 .cards-container{
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .service-card{
-  margin-top: 3rem;
+  margin: 1rem;
   border: 1px solid white;
   padding-top: 44px;
   width: 20%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .service-card img{
   align-self: center;
@@ -772,7 +773,7 @@ html,
   margin: 0 auto;
   width: 95%;
   display: grid;
-  grid-template-columns: 5fr 1fr 5fr;
+  grid-template-columns: 5fr 3fr 5fr;
   grid-auto-rows: minmax(200px, auto);
   justify-items: center;
 }
@@ -1357,9 +1358,7 @@ ul{
     justify-content: flex-start;
   }
   .service-card{
-    margin-left: 1rem;
     width: 22%;
-    margin-top: 1rem;
     align-items: center;
     justify-content: space-between;
   }
@@ -1372,15 +1371,6 @@ ul{
   .service-card img{
     max-width: 35%;
     max-height: 30%;
-  }
-  .service-card:nth-child(5){
-    margin-left: unset;
-  }
-  .service-card:nth-child(9){
-    margin-left: unset;
-  }
-  .service-card:first-child{
-    margin-left: unset;
   }
   .question-container{
     align-items: flex-start;
@@ -1450,9 +1440,11 @@ ul{
 @media (max-width: 768px) {
 .slider-container-wrap {
     display: flex;
-    /* height: 776px; */
     flex-direction: column;
     align-items: center;
+  }
+  .slider-right{
+    flex-direction: column-reverse;
   }
   .swiper-slide{
     width: 100%;
@@ -1519,21 +1511,6 @@ ul{
   }
   .service-card{
     width:30%
-  }
-  .service-card:nth-child(4){
-    margin-left: unset;
-  }
-  .service-card:nth-child(5){
-    margin-left: 1rem;
-  }
-  .service-card:nth-child(7){
-    margin-left: unset;
-  }
-  .service-card:nth-child(9){
-    margin-left: 1rem;
-  }
-  .service-card:nth-child(10){
-    margin-left: unset;
   }
   .card-explanarion{
     width: 330px;
@@ -1663,12 +1640,6 @@ ul{
   }
   .service-card {
     width: 210px;
-  }
-  .service-card:nth-child(3), .service-card:nth-child(5), .service-card:nth-child(9){
-    margin-left: unset;
-  }
-  .service-card:nth-child(4), .service-card:nth-child(10){
-    margin-left: 1rem;
   }
   .text-block h1{
     font-size: 32px;
@@ -1923,7 +1894,7 @@ ul{
   }
   .service-card{
     width: 100%;
-    margin-left: 0 !important;
+    /* margin-left: 0 !important; */
     flex-direction: row;
     padding-top: unset;
     justify-content: space-around;
