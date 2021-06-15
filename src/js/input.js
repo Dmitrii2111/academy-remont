@@ -1,4 +1,4 @@
-const rangeInput = document.querySelector('input[type="range"]')
+const myRangeInput = document.querySelector('input[type="range"]')
 
 function handleInputChange(e) {
   let target = e.target
@@ -11,4 +11,4 @@ function handleInputChange(e) {
   
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
-rangeInput.addEventListener('input', handleInputChange)
+myRangeInput.addEventListener('input', handleInputChange)

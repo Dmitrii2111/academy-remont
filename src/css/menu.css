@@ -75,3 +75,14 @@ a.menu_link:hover{
 .toggle-button .active-toggle.menu-bar-bottom{
   transform: rotate(315deg) translate(4px, 5px);
 }
+
+@media (max-width: 1000px) {
+  a.menu_link{
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  a.menu_link{
+    font-size: 24px;
+  }
+}

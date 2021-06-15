@@ -68,13 +68,14 @@ $(document).ready(function() {
   })
 })
 
-$(document).ready(function(){
+jQuery(function(){
   $('.menu_link').on('click', function() {
-    if($(this).attr('href') != undefined && $(this).attr('href') != '') {
+
+    if($(this).attr('href') != undefined && $(this).attr('href') !='') {
       var el = $(this)
       var dest = el.attr('href')
       $('.menu-wrap').removeClass('menu-show')
-      $('html').animate({
+      $('body').animate({
         scrollTop:
         $(dest).offset().top
       }, 1500);
